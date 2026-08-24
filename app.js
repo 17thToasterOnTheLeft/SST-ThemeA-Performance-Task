@@ -256,7 +256,7 @@ function renderEvent() {
         era.year;
 
     elements.eventLocation.textContent =
-        getEraLocation(era);
+        elements.eventLocation.textContent =     era.location || "Indian subcontinent";
 
 
     /* =========================
