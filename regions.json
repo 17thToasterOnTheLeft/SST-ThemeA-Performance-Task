@@ -1,0 +1,2503 @@
+{
+  "project": {
+    "title": "Who Controlled India And How Did People Respond?",
+    "subtitle": "A political history of the Indian subcontinent",
+    "startYear": "c. 2600 BCE",
+    "endYear": "2026"
+  },
+
+  "responseTypes": {
+    "resistance": {
+      "label": "Resistance",
+      "icon": "swords"
+    },
+    "revolt": {
+      "label": "Revolt",
+      "icon": "flame"
+    },
+    "adaptation": {
+      "label": "Adaptation",
+      "icon": "shuffle"
+    },
+    "alliance": {
+      "label": "Alliance",
+      "icon": "handshake"
+    },
+    "reform": {
+      "label": "Reform",
+      "icon": "scroll"
+    },
+    "protest": {
+      "label": "Protest",
+      "icon": "flag"
+    },
+    "nationalism": {
+      "label": "Nationalism",
+      "icon": "star"
+    },
+    "participation": {
+      "label": "Political participation",
+      "icon": "vote"
+    },
+    "migration": {
+      "label": "Migration",
+      "icon": "route"
+    }
+  },
+
+  "eventTypes": {
+    "civilization": {
+      "label": "Civilization",
+      "icon": "building"
+    },
+    "ruler": {
+      "label": "Ruler",
+      "icon": "crown"
+    },
+    "death": {
+      "label": "Death of ruler",
+      "icon": "skull"
+    },
+    "empire": {
+      "label": "Empire",
+      "icon": "empire"
+    },
+    "battle": {
+      "label": "Battle",
+      "icon": "swords"
+    },
+    "religion": {
+      "label": "Religion",
+      "icon": "temple"
+    },
+    "revolt": {
+      "label": "Revolt",
+      "icon": "flame"
+    },
+    "colonial": {
+      "label": "Colonial rule",
+      "icon": "ship"
+    },
+    "law": {
+      "label": "Law / Constitution",
+      "icon": "scroll"
+    },
+    "reform": {
+      "label": "Reform",
+      "icon": "pen"
+    },
+    "independence": {
+      "label": "Independence",
+      "icon": "flag"
+    },
+    "politics": {
+      "label": "Political change",
+      "icon": "landmark"
+    },
+    "science": {
+      "label": "Science",
+      "icon": "atom"
+    },
+    "technology": {
+      "label": "Technology",
+      "icon": "cpu"
+    },
+    "space": {
+      "label": "Space",
+      "icon": "rocket"
+    }
+  },
+
+  "eras": [
+
+    {
+      "id": "indus",
+      "year": "c. 2600 BCE",
+      "title": "Indus Valley Civilization",
+      "subtitle": "The first great urban civilization",
+      "type": "civilization",
+      "importance": 5,
+
+      "control": {
+        "name": "Indus urban societies",
+        "leader": null,
+        "description": "Large urban settlements develop across the Indus River system. Their exact political structure remains uncertain."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Organized urban life",
+        "description": "People participate in highly organized cities, craft production and long-distance trade networks."
+      },
+
+      "change": {
+        "title": "Urban civilization emerges",
+        "description": "Large planned settlements appear across a broad region of the northwestern subcontinent."
+      },
+
+      "figures": [],
+
+      "tags": [
+        "INDUS VALLEY",
+        "CITIES",
+        "TRADE"
+      ],
+
+      "regions": [
+        "IN-PB",
+        "IN-HR",
+        "IN-RJ",
+        "IN-GJ"
+      ],
+
+      "mapAction": "highlight"
+    },
+
+    {
+      "id": "indus_decline",
+      "year": "c. 1900 BCE",
+      "title": "Indus Cities Decline",
+      "subtitle": "A transformation, not a sudden disappearance",
+      "type": "politics",
+      "importance": 4,
+
+      "control": {
+        "name": "Regional communities",
+        "leader": null,
+        "description": "The large urban system of the Indus Valley changes significantly, with many major cities declining."
+      },
+
+      "response": {
+        "type": "migration",
+        "title": "Communities reorganize",
+        "description": "Population and settlement patterns shift toward smaller and more regional communities."
+      },
+
+      "change": {
+        "title": "The urban network fragments",
+        "description": "The political and economic landscape becomes more decentralized."
+      },
+
+      "figures": [],
+
+      "tags": [
+        "INDUS VALLEY",
+        "MIGRATION",
+        "REGIONALIZATION"
+      ],
+
+      "regions": [
+        "IN-PB",
+        "IN-HR",
+        "IN-RJ",
+        "IN-GJ"
+      ],
+
+      "mapAction": "fade"
+    },
+
+    {
+      "id": "vedic",
+      "year": "c. 1500 BCE",
+      "title": "Vedic Period",
+      "subtitle": "New political communities",
+      "type": "politics",
+      "importance": 4,
+
+      "control": {
+        "name": "Tribal and early kingdoms",
+        "leader": null,
+        "description": "Political communities develop across northern India, with authority often organized around chiefs and emerging kings."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "New social and political structures",
+        "description": "Communities adapt to changing settlement patterns and increasingly complex political organizations."
+      },
+
+      "change": {
+        "title": "Political organization evolves",
+        "description": "Power gradually becomes more structured as communities expand eastward."
+      },
+
+      "figures": [],
+
+      "tags": [
+        "VEDIC PERIOD",
+        "KINGDOMS",
+        "SOCIETY"
+      ],
+
+      "regions": [
+        "IN-PB",
+        "IN-HR",
+        "IN-UP",
+        "IN-RJ"
+      ],
+
+      "mapAction": "highlight"
+    },
+
+    {
+      "id": "mahajanapadas",
+      "year": "c. 600 BCE",
+      "title": "Mahajanapadas",
+      "subtitle": "The age of competing states",
+      "type": "empire",
+      "importance": 5,
+
+      "control": {
+        "name": "Multiple kingdoms and republics",
+        "leader": null,
+        "description": "Sixteen major political powers emerge across northern India, including Magadha, Kosala, Vatsa and Avanti."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Cities and trade expand",
+        "description": "Merchants, farmers and urban communities become increasingly connected to competing states."
+      },
+
+      "change": {
+        "title": "India becomes politically competitive",
+        "description": "Power is divided among numerous kingdoms and republics rather than one dominant empire."
+      },
+
+      "figures": [],
+
+      "tags": [
+        "MAHAJANAPADAS",
+        "MAGADHA",
+        "KINGDOMS"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-BR",
+        "IN-MP",
+        "IN-PB"
+      ],
+
+      "mapAction": "fragment"
+    },
+
+    {
+      "id": "magadha",
+      "year": "c. 550 BCE",
+      "title": "Rise of Magadha",
+      "subtitle": "One kingdom begins to dominate",
+      "type": "empire",
+      "importance": 5,
+
+      "control": {
+        "name": "Kingdom of Magadha",
+        "leader": "Bimbisara",
+        "description": "Magadha grows into the most powerful state in northern India through military expansion, diplomacy and control of strategic resources."
+      },
+
+      "response": {
+        "type": "alliance",
+        "title": "Diplomacy and incorporation",
+        "description": "Neighboring states interact with Magadha through warfare, alliances and political accommodation."
+      },
+
+      "change": {
+        "title": "Power concentrates in eastern India",
+        "description": "Magadha becomes the foundation for later imperial expansion."
+      },
+
+      "figures": [
+        "Bimbisara",
+        "Ajatashatru"
+      ],
+
+      "tags": [
+        "MAGADHA",
+        "EXPANSION",
+        "DIPLOMACY"
+      ],
+
+      "regions": [
+        "IN-BR",
+        "IN-UP"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "buddha",
+      "year": "c. 5th century BCE",
+      "title": "Buddhism Emerges",
+      "subtitle": "A new religious and political influence",
+      "type": "religion",
+      "importance": 4,
+
+      "control": {
+        "name": "Regional kingdoms and republics",
+        "leader": null,
+        "description": "Buddhism develops within a politically competitive landscape dominated by states such as Magadha and Kosala."
+      },
+
+      "response": {
+        "type": "reform",
+        "title": "New ideas challenge established traditions",
+        "description": "Buddhist communities develop outside traditional political and religious structures."
+      },
+
+      "change": {
+        "title": "Religion becomes politically influential",
+        "description": "New religious communities eventually become important partners and critics of rulers."
+      },
+
+      "figures": [
+        "Gautama Buddha"
+      ],
+
+      "tags": [
+        "BUDDHISM",
+        "RELIGION",
+        "SOCIAL CHANGE"
+      ],
+
+      "regions": [
+        "IN-BR",
+        "IN-UP"
+      ],
+
+      "mapAction": "highlight"
+    },
+
+    {
+      "id": "maurya_foundation",
+      "year": "321 BCE",
+      "title": "Mauryan Empire",
+      "subtitle": "The first major imperial unification",
+      "type": "empire",
+      "importance": 5,
+
+      "control": {
+        "name": "Mauryan Empire",
+        "leader": "Chandragupta Maurya",
+        "description": "Chandragupta Maurya establishes an empire centered on Magadha and expands across much of northern India."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Regional powers are incorporated",
+        "description": "Local territories are brought into a centralized imperial administration through conquest, diplomacy and governance."
+      },
+
+      "change": {
+        "title": "Imperial rule expands dramatically",
+        "description": "Political authority becomes concentrated under a single imperial government across a large part of the subcontinent."
+      },
+
+      "figures": [
+        "Chandragupta Maurya",
+        "Chanakya"
+      ],
+
+      "tags": [
+        "MAURYA",
+        "EMPIRE",
+        "UNIFICATION"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-BR",
+        "IN-MP",
+        "IN-RJ",
+        "IN-GJ",
+        "IN-MH",
+        "IN-OD",
+        "IN-JH",
+        "IN-DL"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "ashoka",
+      "year": "268 BCE",
+      "title": "Ashoka",
+      "subtitle": "An emperor changes direction",
+      "type": "ruler",
+      "importance": 5,
+
+      "control": {
+        "name": "Mauryan Empire",
+        "leader": "Ashoka",
+        "description": "Ashoka becomes emperor of one of the largest states in the ancient Indian subcontinent."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "A new model of imperial rule",
+        "description": "Ashoka increasingly emphasizes dhamma, moral conduct and welfare alongside imperial administration."
+      },
+
+      "change": {
+        "title": "Imperial ideology changes",
+        "description": "Ashoka uses inscriptions and public works to communicate a new vision of kingship."
+      },
+
+      "figures": [
+        "Ashoka"
+      ],
+
+      "tags": [
+        "ASHOKA",
+        "MAURYA",
+        "DHAMMA"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-BR",
+        "IN-MP",
+        "IN-OD"
+      ],
+
+      "mapAction": "highlight"
+    },
+
+    {
+      "id": "kalinga",
+      "year": "261 BCE",
+      "title": "Kalinga War",
+      "subtitle": "Conquest and its consequences",
+      "type": "battle",
+      "importance": 5,
+
+      "control": {
+        "name": "Mauryan Empire",
+        "leader": "Ashoka",
+        "description": "Ashoka's forces conquer Kalinga after a major and destructive war."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Kalinga resists conquest",
+        "description": "Kalinga's resistance becomes a defining moment in Ashoka's reign."
+      },
+
+      "change": {
+        "title": "A turning point for Ashoka",
+        "description": "The war is followed by Ashoka's increasing emphasis on dhamma and opposition to unnecessary violence."
+      },
+
+      "figures": [
+        "Ashoka"
+      ],
+
+      "tags": [
+        "KALINGA",
+        "WAR",
+        "MAURYA"
+      ],
+
+      "regions": [
+        "IN-OD"
+      ],
+
+      "mapAction": "transfer"
+    },
+
+    {
+      "id": "maurya_decline",
+      "year": "185 BCE",
+      "title": "End of Mauryan Rule",
+      "subtitle": "Empire fragments",
+      "type": "death",
+      "importance": 4,
+
+      "control": {
+        "name": "Regional successor states",
+        "leader": null,
+        "description": "The Mauryan Empire collapses after the assassination of its last ruler, Brihadratha."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Regional powers return",
+        "description": "Political authority becomes increasingly decentralized as new dynasties emerge."
+      },
+
+      "change": {
+        "title": "Imperial unity breaks apart",
+        "description": "The subcontinent returns to a landscape dominated by multiple regional powers."
+      },
+
+      "figures": [
+        "Brihadratha Maurya"
+      ],
+
+      "tags": [
+        "MAURYA",
+        "DECLINE",
+        "REGIONAL KINGDOMS"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-BR",
+        "IN-MP"
+      ],
+
+      "mapAction": "fragment"
+    },
+
+    {
+      "id": "regional_kingdoms",
+      "year": "c. 200 BCE–300 CE",
+      "title": "Regional Kingdoms",
+      "subtitle": "Power becomes decentralized",
+      "type": "politics",
+      "importance": 4,
+
+      "control": {
+        "name": "Multiple regional dynasties",
+        "leader": null,
+        "description": "Indo-Greek, Shaka, Satavahana, Kushan and other powers control different parts of the subcontinent."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Regional identities strengthen",
+        "description": "Communities adapt to changing rulers while trade and cultural exchange connect distant regions."
+      },
+
+      "change": {
+        "title": "No single empire dominates",
+        "description": "Political authority becomes distributed among numerous regional powers."
+      },
+
+      "figures": [
+        "Kanishka",
+        "Gautamiputra Satakarni"
+      ],
+
+      "tags": [
+        "REGIONAL KINGDOMS",
+        "KUSHANS",
+        "SATAVAHANAS"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-MP",
+        "IN-MH",
+        "IN-GJ",
+        "IN-KA"
+      ],
+
+      "mapAction": "fragment"
+    },
+
+    {
+      "id": "gupta",
+      "year": "c. 320 CE",
+      "title": "Gupta Empire",
+      "subtitle": "A new North Indian power",
+      "type": "empire",
+      "importance": 5,
+
+      "control": {
+        "name": "Gupta Empire",
+        "leader": "Chandragupta I",
+        "description": "The Gupta dynasty establishes a powerful state in northern India."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Regional integration",
+        "description": "Local rulers and communities operate within a political system combining direct rule, alliances and subordinate kingdoms."
+      },
+
+      "change": {
+        "title": "Northern India reunifies under imperial power",
+        "description": "The Guptas establish one of the major political powers of early classical India."
+      },
+
+      "figures": [
+        "Chandragupta I",
+        "Samudragupta"
+      ],
+
+      "tags": [
+        "GUPTA",
+        "EMPIRE",
+        "NORTH INDIA"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-BR",
+        "IN-MP",
+        "IN-RJ",
+        "IN-JH",
+        "IN-CH"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "harsha",
+      "year": "606 CE",
+      "title": "Harsha",
+      "subtitle": "Another northern consolidation",
+      "type": "ruler",
+      "importance": 4,
+
+      "control": {
+        "name": "Kingdom of Harsha",
+        "leader": "Harshavardhana",
+        "description": "Harsha establishes a large kingdom across much of northern India."
+      },
+
+      "response": {
+        "type": "alliance",
+        "title": "Regional cooperation and rivalry",
+        "description": "Harsha's authority depends on relationships with regional rulers rather than complete centralized control."
+      },
+
+      "change": {
+        "title": "Northern India briefly reconsolidates",
+        "description": "A major political center emerges after the decline of Gupta power."
+      },
+
+      "figures": [
+        "Harshavardhana"
+      ],
+
+      "tags": [
+        "HARSHA",
+        "NORTH INDIA",
+        "KINGDOM"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-HR",
+        "IN-PB",
+        "IN-BR"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "regional_medieval",
+      "year": "c. 750–1200",
+      "title": "Age of Regional Kingdoms",
+      "subtitle": "Many centers of power",
+      "type": "politics",
+      "importance": 5,
+
+      "control": {
+        "name": "Regional dynasties",
+        "leader": null,
+        "description": "Pratiharas, Rashtrakutas, Palas, Cholas and many other dynasties compete for political power."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Regional societies flourish",
+        "description": "Local rulers, religious institutions, merchants and communities develop distinctive political and cultural systems."
+      },
+
+      "change": {
+        "title": "Political power becomes highly regional",
+        "description": "No single empire controls most of the subcontinent for an extended period."
+      },
+
+      "figures": [
+        "Rajaraja Chola I",
+        "Rajendra Chola I"
+      ],
+
+      "tags": [
+        "REGIONAL KINGDOMS",
+        "CHOLAS",
+        "PALAS",
+        "RAJPUTS"
+      ],
+
+      "regions": [
+        "IN-TN",
+        "IN-KA",
+        "IN-AP",
+        "IN-TG",
+        "IN-OD",
+        "IN-WB",
+        "IN-UP",
+        "IN-RJ"
+      ],
+
+      "mapAction": "fragment"
+    },
+
+    {
+      "id": "chola",
+      "year": "c. 1000 CE",
+      "title": "Chola Expansion",
+      "subtitle": "A southern imperial power",
+      "type": "empire",
+      "importance": 4,
+
+      "control": {
+        "name": "Chola Empire",
+        "leader": "Rajaraja Chola I",
+        "description": "The Cholas expand across southern India and project power across the Indian Ocean."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Local administration and trade",
+        "description": "Village institutions, temples and merchant networks become important parts of Chola political life."
+      },
+
+      "change": {
+        "title": "Southern India becomes an imperial center",
+        "description": "The Cholas demonstrate that major imperial power can emerge outside northern India."
+      },
+
+      "figures": [
+        "Rajaraja Chola I",
+        "Rajendra Chola I"
+      ],
+
+      "tags": [
+        "CHOLA",
+        "SOUTH INDIA",
+        "TRADE"
+      ],
+
+      "regions": [
+        "IN-TN",
+        "IN-KA",
+        "IN-AP",
+        "IN-KL"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "tarain",
+      "year": "1192",
+      "title": "Second Battle of Tarain",
+      "subtitle": "A major shift in North Indian power",
+      "type": "battle",
+      "importance": 5,
+
+      "control": {
+        "name": "Ghurid forces",
+        "leader": "Muhammad Ghori",
+        "description": "Muhammad Ghori defeats Prithviraja III, opening the way for Ghurid expansion in northern India."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Rajput resistance",
+        "description": "Regional Rajput powers resist the expansion of Ghurid authority."
+      },
+
+      "change": {
+        "title": "Delhi becomes a center of expanding Islamic rule",
+        "description": "The victory helps establish the political foundations for the Delhi Sultanate."
+      },
+
+      "figures": [
+        "Muhammad Ghori",
+        "Prithviraja III"
+      ],
+
+      "tags": [
+        "BATTLE",
+        "RAJPUTS",
+        "GHURIDS"
+      ],
+
+      "regions": [
+        "IN-HR",
+        "IN-DL",
+        "IN-PB"
+      ],
+
+      "mapAction": "transfer"
+    },
+
+    {
+      "id": "delhi_sultanate",
+      "year": "1206",
+      "title": "Delhi Sultanate",
+      "subtitle": "Delhi becomes an imperial capital",
+      "type": "empire",
+      "importance": 5,
+
+      "control": {
+        "name": "Delhi Sultanate",
+        "leader": "Qutb ud-Din Aibak",
+        "description": "Qutb ud-Din Aibak establishes an independent sultanate centered on Delhi."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Regional resistance and accommodation",
+        "description": "Rajput states and other regional powers resist expansion while some local rulers negotiate with the Sultanate."
+      },
+
+      "change": {
+        "title": "A new political center emerges",
+        "description": "Delhi becomes the center of a succession of powerful dynasties ruling large parts of northern India."
+      },
+
+      "figures": [
+        "Qutb ud-Din Aibak",
+        "Iltutmish"
+      ],
+
+      "tags": [
+        "DELHI SULTANATE",
+        "DELHI",
+        "EXPANSION"
+      ],
+
+      "regions": [
+        "IN-DL",
+        "IN-HR",
+        "IN-UP",
+        "IN-PB",
+        "IN-RJ"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "alauddin_khalji",
+      "year": "1296",
+      "title": "Alauddin Khalji",
+      "subtitle": "The Sultanate expands south",
+      "type": "ruler",
+      "importance": 4,
+
+      "control": {
+        "name": "Delhi Sultanate",
+        "leader": "Alauddin Khalji",
+        "description": "Alauddin Khalji greatly expands the Sultanate's influence and launches campaigns into the Deccan."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Regional kingdoms resist",
+        "description": "Rajput and Deccan powers resist military expansion while some accept tributary relationships."
+      },
+
+      "change": {
+        "title": "Northern power reaches deeper into the Deccan",
+        "description": "The political balance of the subcontinent shifts as Delhi projects power farther south."
+      },
+
+      "figures": [
+        "Alauddin Khalji"
+      ],
+
+      "tags": [
+        "DELHI SULTANATE",
+        "DECCAN",
+        "EXPANSION"
+      ],
+
+      "regions": [
+        "IN-RJ",
+        "IN-GJ",
+        "IN-MP",
+        "IN-MH",
+        "IN-KA",
+        "IN-TG"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "vijayanagara",
+      "year": "1336",
+      "title": "Vijayanagara",
+      "subtitle": "A major southern power",
+      "type": "empire",
+      "importance": 5,
+
+      "control": {
+        "name": "Vijayanagara Empire",
+        "leader": "Harihara I and Bukka Raya I",
+        "description": "The Vijayanagara Empire emerges in southern India and becomes a major counterweight to northern and Deccan powers."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Southern political resistance",
+        "description": "Vijayanagara becomes a major center of resistance and regional consolidation."
+      },
+
+      "change": {
+        "title": "Power shifts toward the south",
+        "description": "Southern India develops a powerful state capable of competing with neighboring sultanates."
+      },
+
+      "figures": [
+        "Harihara I",
+        "Bukka Raya I"
+      ],
+
+      "tags": [
+        "VIJAYANAGARA",
+        "SOUTH INDIA",
+        "DECCAN"
+      ],
+
+      "regions": [
+        "IN-KA",
+        "IN-AP",
+        "IN-TN",
+        "IN-TG"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "panipat_1526",
+      "year": "1526",
+      "title": "The Mughals Arrive",
+      "subtitle": "First Battle of Panipat",
+      "type": "battle",
+      "importance": 5,
+
+      "control": {
+        "name": "Mughal Empire",
+        "leader": "Babur",
+        "description": "Babur defeats Ibrahim Lodi and establishes Mughal control over Delhi and Agra."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Regional resistance and alliances",
+        "description": "Regional powers resist Mughal expansion while others negotiate or form alliances with the new empire."
+      },
+
+      "change": {
+        "title": "A new imperial dynasty takes power",
+        "description": "The Lodi dynasty falls and Mughal rule begins in northern India."
+      },
+
+      "figures": [
+        "Babur",
+        "Ibrahim Lodi"
+      ],
+
+      "tags": [
+        "MUGHAL",
+        "PANIPAT",
+        "EMPIRE"
+      ],
+
+      "regions": [
+        "IN-DL",
+        "IN-HR",
+        "IN-UP"
+      ],
+
+      "mapAction": "transfer"
+    },
+
+    {
+      "id": "sher_shah",
+      "year": "1540",
+      "title": "Sher Shah Suri",
+      "subtitle": "The Mughals are temporarily displaced",
+      "type": "ruler",
+      "importance": 4,
+
+      "control": {
+        "name": "Sur Empire",
+        "leader": "Sher Shah Suri",
+        "description": "Sher Shah defeats Humayun and establishes the Sur Empire."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Administrative reform",
+        "description": "Sher Shah reorganizes revenue, roads, currency and administration."
+      },
+
+      "change": {
+        "title": "Mughal rule is interrupted",
+        "description": "The Sur Empire demonstrates the continuing competition for control of northern India."
+      },
+
+      "figures": [
+        "Sher Shah Suri",
+        "Humayun"
+      ],
+
+      "tags": [
+        "SUR EMPIRE",
+        "REFORM",
+        "ADMINISTRATION"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-BR",
+        "IN-DL",
+        "IN-PB"
+      ],
+
+      "mapAction": "transfer"
+    },
+
+    {
+      "id": "akbar",
+      "year": "1556",
+      "title": "Akbar",
+      "subtitle": "The Mughal Empire consolidates",
+      "type": "ruler",
+      "importance": 5,
+
+      "control": {
+        "name": "Mughal Empire",
+        "leader": "Akbar",
+        "description": "Akbar becomes emperor and begins a period of major territorial expansion and administrative consolidation."
+      },
+
+      "response": {
+        "type": "alliance",
+        "title": "Alliance as well as conquest",
+        "description": "Akbar combines military expansion with alliances, particularly with several Rajput rulers."
+      },
+
+      "change": {
+        "title": "Mughal power becomes more durable",
+        "description": "A centralized imperial system develops that can govern a diverse population and territory."
+      },
+
+      "figures": [
+        "Akbar"
+      ],
+
+      "tags": [
+        "AKBAR",
+        "MUGHAL",
+        "ADMINISTRATION"
+      ],
+
+      "regions": [
+        "IN-DL",
+        "IN-UP",
+        "IN-RJ",
+        "IN-GJ",
+        "IN-MP",
+        "IN-BR"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "akbar_expansion",
+      "year": "1570–1605",
+      "title": "Mughal Expansion",
+      "subtitle": "Akbar's empire grows",
+      "type": "empire",
+      "importance": 5,
+
+      "control": {
+        "name": "Mughal Empire",
+        "leader": "Akbar",
+        "description": "Mughal authority expands across northern and central India and into Gujarat and Bengal."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Resistance, alliance and incorporation",
+        "description": "Different communities and rulers respond through warfare, negotiation, alliance and incorporation into the imperial system."
+      },
+
+      "change": {
+        "title": "Mughal territory expands across the subcontinent",
+        "description": "The Mughal Empire becomes one of the dominant political powers in India."
+      },
+
+      "figures": [
+        "Akbar"
+      ],
+
+      "tags": [
+        "MUGHAL",
+        "EXPANSION",
+        "RAJPUTS"
+      ],
+
+      "regions": [
+        "IN-RJ",
+        "IN-GJ",
+        "IN-MP",
+        "IN-UP",
+        "IN-BR",
+        "IN-WB"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "shah_jahan",
+      "year": "1628",
+      "title": "Shah Jahan",
+      "subtitle": "Imperial power and monumental rule",
+      "type": "ruler",
+      "importance": 4,
+
+      "control": {
+        "name": "Mughal Empire",
+        "leader": "Shah Jahan",
+        "description": "Shah Jahan rules during a period of considerable Mughal wealth, territorial power and architectural activity."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Imperial culture expands",
+        "description": "Court culture, architecture and administration become major expressions of imperial authority."
+      },
+
+      "change": {
+        "title": "Imperial authority becomes highly visible",
+        "description": "Monumental architecture becomes an important symbol of Mughal power."
+      },
+
+      "figures": [
+        "Shah Jahan"
+      ],
+
+      "tags": [
+        "MUGHAL",
+        "ARCHITECTURE",
+        "IMPERIAL POWER"
+      ],
+
+      "regions": [
+        "IN-DL",
+        "IN-UP"
+      ],
+
+      "mapAction": "highlight"
+    },
+
+    {
+      "id": "aurangzeb",
+      "year": "1658",
+      "title": "Aurangzeb",
+      "subtitle": "Expansion reaches its greatest extent",
+      "type": "ruler",
+      "importance": 5,
+
+      "control": {
+        "name": "Mughal Empire",
+        "leader": "Aurangzeb",
+        "description": "Aurangzeb expands Mughal territory deep into the Deccan."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Resistance intensifies",
+        "description": "Marathas, Sikhs and other regional powers challenge Mughal authority."
+      },
+
+      "change": {
+        "title": "The empire reaches enormous scale",
+        "description": "Mughal territorial expansion reaches its greatest extent, but governing the enlarged empire becomes increasingly difficult."
+      },
+
+      "figures": [
+        "Aurangzeb",
+        "Shivaji"
+      ],
+
+      "tags": [
+        "AURANGZEB",
+        "MUGHAL",
+        "DECCAN"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-MP",
+        "IN-MH",
+        "IN-GJ",
+        "IN-RJ",
+        "IN-KA",
+        "IN-TG",
+        "IN-TN"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "shivaji",
+      "year": "1674",
+      "title": "Shivaji's Coronation",
+      "subtitle": "Rise of Maratha power",
+      "type": "ruler",
+      "importance": 5,
+
+      "control": {
+        "name": "Maratha state",
+        "leader": "Shivaji",
+        "description": "Shivaji is formally crowned and establishes an independent Maratha kingdom in western India."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Resistance becomes state-building",
+        "description": "Opposition to Mughal and other regional powers develops into an organized Maratha state."
+      },
+
+      "change": {
+        "title": "A new regional power emerges",
+        "description": "Maratha political power becomes a major force in western and later central India."
+      },
+
+      "figures": [
+        "Shivaji"
+      ],
+
+      "tags": [
+        "MARATHA",
+        "SHIVAJI",
+        "RESISTANCE"
+      ],
+
+      "regions": [
+        "IN-MH",
+        "IN-GJ",
+        "IN-KA"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "aurangzeb_death",
+      "year": "1707",
+      "title": "Death of Aurangzeb",
+      "subtitle": "Mughal power begins to fragment",
+      "type": "death",
+      "importance": 5,
+
+      "control": {
+        "name": "Mughal Empire",
+        "leader": "Aurangzeb",
+        "description": "Aurangzeb dies after a long reign marked by extensive expansion and prolonged warfare."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Regional powers assert themselves",
+        "description": "Marathas, Sikhs, Rajputs and other regional powers increasingly challenge Mughal authority."
+      },
+
+      "change": {
+        "title": "Central authority weakens",
+        "description": "The Mughal Empire remains important but loses effective control over increasing parts of the subcontinent."
+      },
+
+      "figures": [
+        "Aurangzeb"
+      ],
+
+      "tags": [
+        "MUGHAL DECLINE",
+        "MARATHAS",
+        "SIKHS"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-MH",
+        "IN-RJ",
+        "IN-PB"
+      ],
+
+      "mapAction": "fragment"
+    },
+
+    {
+      "id": "khalsa",
+      "year": "1699",
+      "title": "The Khalsa",
+      "subtitle": "Sikh political identity strengthens",
+      "type": "religion",
+      "importance": 4,
+
+      "control": {
+        "name": "Mughal and regional authorities",
+        "leader": null,
+        "description": "Mughal authority remains significant in northern India while Sikh communities develop stronger collective organization."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Collective resistance",
+        "description": "Guru Gobind Singh establishes the Khalsa, strengthening Sikh military and communal organization."
+      },
+
+      "change": {
+        "title": "A new political force develops",
+        "description": "Sikh communities become increasingly organized as a political and military force."
+      },
+
+      "figures": [
+        "Guru Gobind Singh"
+      ],
+
+      "tags": [
+        "SIKHISM",
+        "KHALSA",
+        "RESISTANCE"
+      ],
+
+      "regions": [
+        "IN-PB",
+        "IN-HR"
+      ],
+
+      "mapAction": "highlight"
+    },
+
+    {
+      "id": "maratha_expansion",
+      "year": "c. 1720–1761",
+      "title": "Maratha Expansion",
+      "subtitle": "A new dominant power",
+      "type": "empire",
+      "importance": 5,
+
+      "control": {
+        "name": "Maratha Confederacy",
+        "leader": "Peshwas",
+        "description": "Maratha power expands rapidly across central and northern India as Mughal authority weakens."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Regional states negotiate and resist",
+        "description": "Local rulers respond to Maratha expansion through alliances, tribute, resistance and political negotiation."
+      },
+
+      "change": {
+        "title": "The political map changes again",
+        "description": "The Marathas become one of the most powerful political forces in eighteenth-century India."
+      },
+
+      "figures": [
+        "Baji Rao I",
+        "Balaji Baji Rao"
+      ],
+
+      "tags": [
+        "MARATHA",
+        "EXPANSION",
+        "MUGHAL DECLINE"
+      ],
+
+      "regions": [
+        "IN-MH",
+        "IN-MP",
+        "IN-GJ",
+        "IN-RJ",
+        "IN-UP",
+        "IN-DEL"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "plassey",
+      "year": "1757",
+      "title": "Battle of Plassey",
+      "subtitle": "The East India Company gains political power",
+      "type": "colonial",
+      "importance": 5,
+
+      "control": {
+        "name": "East India Company",
+        "leader": "Robert Clive",
+        "description": "The Company's victory over the Nawab of Bengal gives it decisive political influence in Bengal."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Opposition to Company power",
+        "description": "Political and military opposition continues as the Company expands its influence."
+      },
+
+      "change": {
+        "title": "A trading company becomes a political power",
+        "description": "The East India Company begins transforming its commercial influence into territorial authority."
+      },
+
+      "figures": [
+        "Robert Clive",
+        "Siraj ud-Daulah"
+      ],
+
+      "tags": [
+        "EAST INDIA COMPANY",
+        "BENGAL",
+        "COLONIALISM"
+      ],
+
+      "regions": [
+        "IN-WB"
+      ],
+
+      "mapAction": "transfer"
+    },
+
+    {
+      "id": "buxar",
+      "year": "1764",
+      "title": "Battle of Buxar",
+      "subtitle": "Company authority expands",
+      "type": "battle",
+      "importance": 5,
+
+      "control": {
+        "name": "East India Company",
+        "leader": null,
+        "description": "Company forces defeat the combined armies of Mir Qasim, Shuja-ud-Daula and the Mughal emperor Shah Alam II."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Regional rulers challenge Company expansion",
+        "description": "Indian rulers attempt to prevent the Company from becoming the dominant political force in eastern India."
+      },
+
+      "change": {
+        "title": "Company control deepens",
+        "description": "The victory strengthens the Company's political and fiscal position in Bengal and Bihar."
+      },
+
+      "figures": [
+        "Shah Alam II",
+        "Shuja-ud-Daula",
+        "Mir Qasim"
+      ],
+
+      "tags": [
+        "EAST INDIA COMPANY",
+        "BENGAL",
+        "BIHAR"
+      ],
+
+      "regions": [
+        "IN-BR",
+        "IN-WB"
+      ],
+
+      "mapAction": "expand"
+    },
+
+    {
+      "id": "mysore",
+      "year": "1760s–1799",
+      "title": "Mysore Resists",
+      "subtitle": "A major challenge to Company expansion",
+      "type": "resistance",
+      "importance": 5,
+
+      "control": {
+        "name": "Kingdom of Mysore",
+        "leader": "Haider Ali / Tipu Sultan",
+        "description": "Mysore develops into a powerful state that repeatedly challenges British expansion in southern India."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Organized military resistance",
+        "description": "Haider Ali and Tipu Sultan build military power and fight several wars against the Company and its allies."
+      },
+
+      "change": {
+        "title": "The Company faces organized opposition",
+        "description": "Mysore becomes one of the most significant obstacles to British expansion in southern India."
+      },
+
+      "figures": [
+        "Haider Ali",
+        "Tipu Sultan"
+      ],
+
+      "tags": [
+        "MYSORE",
+        "TIPU SULTAN",
+        "RESISTANCE"
+      ],
+
+      "regions": [
+        "IN-KA",
+        "IN-TN",
+        "IN-KL"
+      ],
+
+      "mapAction": "contest"
+    },
+
+    {
+      "id": "maratha_defeat",
+      "year": "1818",
+      "title": "End of Maratha Dominance",
+      "subtitle": "Company supremacy expands",
+      "type": "battle",
+      "importance": 5,
+
+      "control": {
+        "name": "East India Company",
+        "leader": null,
+        "description": "The defeat of the Maratha Confederacy removes the last major Indian power capable of challenging Company supremacy across much of the subcontinent."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Resistance continues locally",
+        "description": "Although Maratha political dominance ends, opposition to Company rule continues in many regions."
+      },
+
+      "change": {
+        "title": "Company power becomes dominant",
+        "description": "The political balance shifts decisively toward British-controlled territories and allied princely states."
+      },
+
+      "figures": [
+        "Baji Rao II"
+      ],
+
+      "tags": [
+        "MARATHA",
+        "EAST INDIA COMPANY",
+        "COLONIALISM"
+      ],
+
+      "regions": [
+        "IN-MH",
+        "IN-MP",
+        "IN-GJ",
+        "IN-RJ"
+      ],
+
+      "mapAction": "transfer"
+    },
+
+    {
+      "id": "revolt_1857",
+      "year": "1857",
+      "title": "Revolt of 1857",
+      "subtitle": "The Company faces a major uprising",
+      "type": "revolt",
+      "importance": 5,
+
+      "control": {
+        "name": "East India Company",
+        "leader": null,
+        "description": "Company rule faces a major uprising involving soldiers, rulers and civilians across parts of northern and central India."
+      },
+
+      "response": {
+        "type": "revolt",
+        "title": "Widespread armed resistance",
+        "description": "The uprising spreads through several major centers, with different groups joining for different political and social reasons."
+      },
+
+      "change": {
+        "title": "Company rule collapses",
+        "description": "The revolt fails militarily but fundamentally changes the structure of British rule in India."
+      },
+
+      "figures": [
+        "Bahadur Shah II",
+        "Rani Lakshmibai",
+        "Nana Sahib",
+        "Begum Hazrat Mahal"
+      ],
+
+      "tags": [
+        "1857",
+        "REVOLT",
+        "BRITISH RULE"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-DL",
+        "IN-HR",
+        "IN-BR",
+        "IN-MP",
+        "IN-RJ"
+      ],
+
+      "mapAction": "contest"
+    },
+
+    {
+      "id": "crown_rule",
+      "year": "1858",
+      "title": "British Crown Rule",
+      "subtitle": "The Raj begins",
+      "type": "colonial",
+      "importance": 5,
+
+      "control": {
+        "name": "British Crown",
+        "leader": "British monarch",
+        "description": "The Government of India Act 1858 transfers governance from the East India Company to the British Crown."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Political organization changes",
+        "description": "Indian political responses increasingly move toward education, associations, petitions, reform movements and eventually organized nationalism."
+      },
+
+      "change": {
+        "title": "Company rule becomes Crown rule",
+        "description": "India is governed directly on behalf of the British Crown."
+      },
+
+      "figures": [
+        "Queen Victoria"
+      ],
+
+      "tags": [
+        "BRITISH RAJ",
+        "COLONIALISM",
+        "1858"
+      ],
+
+      "regions": [
+        "IN-UP",
+        "IN-MP",
+        "IN-BR",
+        "IN-WB",
+        "IN-MH",
+        "IN-TN",
+        "IN-PB"
+      ],
+
+      "mapAction": "transfer"
+    },
+
+    {
+      "id": "congress",
+      "year": "1885",
+      "title": "Indian National Congress",
+      "subtitle": "Organized nationalism begins",
+      "type": "politics",
+      "importance": 5,
+
+      "control": {
+        "name": "British Raj",
+        "leader": null,
+        "description": "British colonial authority remains firmly established."
+      },
+
+      "response": {
+        "type": "nationalism",
+        "title": "Political organization",
+        "description": "Indian political leaders establish the Indian National Congress to create a platform for political discussion and representation."
+      },
+
+      "change": {
+        "title": "Indian nationalism becomes organized",
+        "description": "A nationwide political organization begins developing within colonial India."
+      },
+
+      "figures": [
+        "Allan Octavian Hume",
+        "Dadabhai Naoroji",
+        "Surendranath Banerjee"
+      ],
+
+      "tags": [
+        "CONGRESS",
+        "NATIONALISM",
+        "POLITICS"
+      ],
+
+      "regions": [],
+
+      "mapAction": "none"
+    },
+
+    {
+      "id": "partition_bengal",
+      "year": "1905",
+      "title": "Partition of Bengal",
+      "subtitle": "A new wave of political resistance",
+      "type": "politics",
+      "importance": 5,
+
+      "control": {
+        "name": "British Raj",
+        "leader": null,
+        "description": "The British government partitions Bengal, officially citing administrative reasons."
+      },
+
+      "response": {
+        "type": "protest",
+        "title": "Swadeshi movement",
+        "description": "Large protests, boycotts and promotion of Indian-made goods develop in response to the partition."
+      },
+
+      "change": {
+        "title": "Mass political participation grows",
+        "description": "Anti-colonial politics expands beyond elite political organizations into broader public movements."
+      },
+
+      "figures": [
+        "Rabindranath Tagore",
+        "Surendranath Banerjee"
+      ],
+
+      "tags": [
+        "BENGAL",
+        "SWADESHI",
+        "PROTEST"
+      ],
+
+      "regions": [
+        "IN-WB"
+      ],
+
+      "mapAction": "partition"
+    },
+
+    {
+      "id": "jallianwala",
+      "year": "1919",
+      "title": "Jallianwala Bagh",
+      "subtitle": "Colonial violence changes public opinion",
+      "type": "politics",
+      "importance": 5,
+
+      "control": {
+        "name": "British Raj",
+        "leader": null,
+        "description": "British troops under General Dyer fire on a gathering in Amritsar."
+      },
+
+      "response": {
+        "type": "protest",
+        "title": "Public outrage",
+        "description": "The massacre generates widespread outrage and strengthens opposition to colonial rule."
+      },
+
+      "change": {
+        "title": "Trust in colonial rule collapses further",
+        "description": "The event becomes a major catalyst for India's independence movement."
+      },
+
+      "figures": [
+        "Mahatma Gandhi",
+        "General Reginald Dyer"
+      ],
+
+      "tags": [
+        "AMRITSAR",
+        "PROTEST",
+        "NATIONALISM"
+      ],
+
+      "regions": [
+        "IN-PB"
+      ],
+
+      "mapAction": "highlight"
+    },
+
+    {
+      "id": "non_cooperation",
+      "year": "1920",
+      "title": "Non-Cooperation Movement",
+      "subtitle": "Mass participation enters the struggle",
+      "type": "protest",
+      "importance": 5,
+
+      "control": {
+        "name": "British Raj",
+        "leader": null,
+        "description": "British colonial institutions continue to govern India."
+      },
+
+      "response": {
+        "type": "protest",
+        "title": "Mass non-cooperation",
+        "description": "Gandhi and the Indian National Congress encourage people to withdraw cooperation from selected colonial institutions."
+      },
+
+      "change": {
+        "title": "The independence movement becomes mass politics",
+        "description": "Large numbers of Indians participate in organized anti-colonial politics."
+      },
+
+      "figures": [
+        "Mahatma Gandhi",
+        "Jawaharlal Nehru"
+      ],
+
+      "tags": [
+        "GANDHI",
+        "NON-COOPERATION",
+        "NATIONALISM"
+      ],
+
+      "regions": [],
+      "mapAction": "none"
+    },
+
+    {
+      "id": "salt_march",
+      "year": "1930",
+      "title": "Salt March",
+      "subtitle": "Civil disobedience",
+      "type": "protest",
+      "importance": 5,
+
+      "control": {
+        "name": "British Raj",
+        "leader": null,
+        "description": "The British government maintains laws controlling the production and taxation of salt."
+      },
+
+      "response": {
+        "type": "protest",
+        "title": "Civil disobedience",
+        "description": "Gandhi leads a march to the coast to challenge the colonial salt laws, helping launch a wider civil disobedience movement."
+      },
+
+      "change": {
+        "title": "Colonial laws are challenged through mass action",
+        "description": "Civil disobedience becomes a central method of the independence movement."
+      },
+
+      "figures": [
+        "Mahatma Gandhi"
+      ],
+
+      "tags": [
+        "SALT MARCH",
+        "GANDHI",
+        "CIVIL DISOBEDIENCE"
+      ],
+
+      "regions": [
+        "IN-GJ"
+      ],
+
+      "mapAction": "route"
+    },
+
+    {
+      "id": "government_india_1935",
+      "year": "1935",
+      "title": "Government of India Act",
+      "subtitle": "Limited self-government",
+      "type": "law",
+      "importance": 4,
+
+      "control": {
+        "name": "British Raj",
+        "leader": null,
+        "description": "Britain retains ultimate authority while introducing expanded provincial autonomy and electoral representation."
+      },
+
+      "response": {
+        "type": "participation",
+        "title": "Political participation",
+        "description": "Indian political parties increasingly participate in provincial elections and governments."
+      },
+
+      "change": {
+        "title": "Provincial politics expands",
+        "description": "Indian politicians gain greater experience in operating elected governments."
+      },
+
+      "figures": [
+        "Mahatma Gandhi",
+        "Jawaharlal Nehru"
+      ],
+
+      "tags": [
+        "GOVERNMENT OF INDIA ACT",
+        "ELECTIONS",
+        "POLITICS"
+      ],
+
+      "regions": [],
+      "mapAction": "none"
+    },
+
+    {
+      "id": "quit_india",
+      "year": "1942",
+      "title": "Quit India Movement",
+      "subtitle": "Demand for immediate independence",
+      "type": "revolt",
+      "importance": 5,
+
+      "control": {
+        "name": "British Raj",
+        "leader": null,
+        "description": "Britain continues to control India during the Second World War."
+      },
+
+      "response": {
+        "type": "protest",
+        "title": "Quit India",
+        "description": "The Indian National Congress launches a mass movement demanding an end to British rule."
+      },
+
+      "change": {
+        "title": "The demand for independence becomes unavoidable",
+        "description": "Although the movement is suppressed, British authority faces increasingly organized opposition."
+      },
+
+      "figures": [
+        "Mahatma Gandhi",
+        "Jawaharlal Nehru",
+        "Sardar Vallabhbhai Patel"
+      ],
+
+      "tags": [
+        "QUIT INDIA",
+        "1942",
+        "INDEPENDENCE"
+      ],
+
+      "regions": [],
+      "mapAction": "none"
+    },
+
+    {
+      "id": "independence",
+      "year": "1947",
+      "title": "Independence and Partition",
+      "subtitle": "The end of British rule",
+      "type": "independence",
+      "importance": 5,
+
+      "control": {
+        "name": "Independent India",
+        "leader": "Jawaharlal Nehru",
+        "description": "British rule ends and India becomes an independent country. Partition creates India and Pakistan."
+      },
+
+      "response": {
+        "type": "migration",
+        "title": "Independence, celebration and displacement",
+        "description": "Independence is accompanied by mass migration, communal violence and enormous social upheaval caused by Partition."
+      },
+
+      "change": {
+        "title": "Colonial rule ends",
+        "description": "Political sovereignty passes from the British Raj to independent governments."
+      },
+
+      "figures": [
+        "Jawaharlal Nehru",
+        "Muhammad Ali Jinnah",
+        "Mahatma Gandhi",
+        "Sardar Vallabhbhai Patel"
+      ],
+
+      "tags": [
+        "INDEPENDENCE",
+        "PARTITION",
+        "1947"
+      ],
+
+      "regions": [
+        "IN-PB",
+        "IN-WB"
+      ],
+
+      "mapAction": "partition"
+    },
+
+    {
+      "id": "constitution",
+      "year": "1950",
+      "title": "Republic of India",
+      "subtitle": "The Constitution comes into force",
+      "type": "law",
+      "importance": 5,
+
+      "control": {
+        "name": "Republic of India",
+        "leader": "Constitutional government",
+        "description": "India becomes a sovereign democratic republic under its new Constitution."
+      },
+
+      "response": {
+        "type": "participation",
+        "title": "Citizens become constitutional participants",
+        "description": "The Constitution establishes universal adult suffrage and a democratic political system."
+      },
+
+      "change": {
+        "title": "India becomes a republic",
+        "description": "Political authority is defined through a democratic Constitution rather than monarchy or colonial rule."
+      },
+
+      "figures": [
+        "B. R. Ambedkar",
+        "Jawaharlal Nehru",
+        "Rajendra Prasad"
+      ],
+
+      "tags": [
+        "CONSTITUTION",
+        "REPUBLIC",
+        "DEMOCRACY"
+      ],
+
+      "regions": [
+        "modern-india"
+      ],
+
+      "mapAction": "modernize"
+    },
+
+    {
+      "id": "first_election",
+      "year": "1951–52",
+      "title": "First General Election",
+      "subtitle": "Democracy on an enormous scale",
+      "type": "politics",
+      "importance": 5,
+
+      "control": {
+        "name": "Elected government",
+        "leader": "Jawaharlal Nehru",
+        "description": "India holds its first general election under universal adult suffrage."
+      },
+
+      "response": {
+        "type": "participation",
+        "title": "Mass democratic participation",
+        "description": "Millions of citizens participate in India's first national election."
+      },
+
+      "change": {
+        "title": "Democracy becomes practical reality",
+        "description": "India demonstrates that representative government can operate across an enormous and diverse population."
+      },
+
+      "figures": [
+        "Jawaharlal Nehru",
+        "Sukumar Sen"
+      ],
+
+      "tags": [
+        "ELECTION",
+        "DEMOCRACY",
+        "REPUBLIC"
+      ],
+
+      "regions": [
+        "modern-india"
+      ],
+
+      "mapAction": "modernize"
+    },
+
+    {
+      "id": "states_reorganisation",
+      "year": "1956",
+      "title": "States Reorganisation",
+      "subtitle": "India redraws its internal map",
+      "type": "law",
+      "importance": 5,
+
+      "control": {
+        "name": "Republic of India",
+        "leader": "Jawaharlal Nehru",
+        "description": "India reorganizes many state boundaries, largely around linguistic identities."
+      },
+
+      "response": {
+        "type": "protest",
+        "title": "Language-based movements",
+        "description": "Political movements and protests help push the government toward reorganizing states along linguistic lines."
+      },
+
+      "change": {
+        "title": "The internal political map changes",
+        "description": "India's federal structure is reshaped to better reflect linguistic and regional identities."
+      },
+
+      "figures": [
+        "Jawaharlal Nehru",
+        "Potti Sreeramulu"
+      ],
+
+      "tags": [
+        "STATES",
+        "LANGUAGE",
+        "FEDERALISM"
+      ],
+
+      "regions": [
+        "modern-india"
+      ],
+
+      "mapAction": "redraw"
+    },
+
+    {
+      "id": "green_revolution",
+      "year": "1960s–1970s",
+      "title": "Green Revolution",
+      "subtitle": "Transforming Indian agriculture",
+      "type": "politics",
+      "importance": 4,
+
+      "control": {
+        "name": "Republic of India",
+        "leader": "Central and state governments",
+        "description": "Government agricultural policies promote high-yield crops, irrigation, fertilizers and modern farming methods."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Farmers adopt new methods",
+        "description": "Farmers in several regions adopt new technologies, dramatically increasing agricultural production."
+      },
+
+      "change": {
+        "title": "India's food system changes",
+        "description": "Agricultural productivity rises significantly, particularly in northwestern India."
+      },
+
+      "figures": [
+        "M. S. Swaminathan",
+        "Norman Borlaug"
+      ],
+
+      "tags": [
+        "AGRICULTURE",
+        "POLICY",
+        "MODERN INDIA"
+      ],
+
+      "regions": [
+        "IN-PB",
+        "IN-HR",
+        "IN-UP"
+      ],
+
+      "mapAction": "highlight"
+    },
+
+    {
+      "id": "1971",
+      "year": "1971",
+      "title": "Bangladesh Liberation War",
+      "subtitle": "A major regional transformation",
+      "type": "battle",
+      "importance": 5,
+
+      "control": {
+        "name": "India / Pakistan / Bangladesh",
+        "leader": null,
+        "description": "The conflict in East Pakistan develops into a war involving India and results in the creation of Bangladesh."
+      },
+
+      "response": {
+        "type": "migration",
+        "title": "Mass displacement and political mobilization",
+        "description": "Millions of people are displaced during the conflict, while the Bengali independence movement seeks a separate state."
+      },
+
+      "change": {
+        "title": "The map of South Asia changes",
+        "description": "Bangladesh becomes an independent country and India's eastern geopolitical environment is transformed."
+      },
+
+      "figures": [
+        "Indira Gandhi",
+        "Sheikh Mujibur Rahman"
+      ],
+
+      "tags": [
+        "BANGLADESH",
+        "WAR",
+        "SOUTH ASIA"
+      ],
+
+      "regions": [
+        "IN-WB",
+        "IN-TR"
+      ],
+
+      "mapAction": "border"
+    },
+
+    {
+      "id": "emergency",
+      "year": "1975–1977",
+      "title": "The Emergency",
+      "subtitle": "Democracy under strain",
+      "type": "politics",
+      "importance": 5,
+
+      "control": {
+        "name": "Government of India",
+        "leader": "Indira Gandhi",
+        "description": "A national Emergency is declared, during which civil liberties and political opposition are heavily restricted."
+      },
+
+      "response": {
+        "type": "resistance",
+        "title": "Opposition and political resistance",
+        "description": "Opposition leaders, activists and organizations challenge the government, and the Emergency eventually ends with elections."
+      },
+
+      "change": {
+        "title": "The limits of political power are tested",
+        "description": "The period becomes a major episode in India's democratic history."
+      },
+
+      "figures": [
+        "Indira Gandhi",
+        "Jayaprakash Narayan"
+      ],
+
+      "tags": [
+        "EMERGENCY",
+        "DEMOCRACY",
+        "POLITICS"
+      ],
+
+      "regions": [],
+      "mapAction": "none"
+    },
+
+    {
+      "id": "economic_liberalisation",
+      "year": "1991",
+      "title": "Economic Liberalisation",
+      "subtitle": "India changes its economic direction",
+      "type": "reform",
+      "importance": 5,
+
+      "control": {
+        "name": "Government of India",
+        "leader": "P. V. Narasimha Rao",
+        "description": "The government introduces major economic reforms reducing restrictions and opening the economy to greater global participation."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Economic transformation",
+        "description": "Businesses, workers and consumers adapt to a more open and increasingly globalized economy."
+      },
+
+      "change": {
+        "title": "The economic system shifts",
+        "description": "Liberalization changes India's relationship with trade, investment and the global economy."
+      },
+
+      "figures": [
+        "P. V. Narasimha Rao",
+        "Manmohan Singh"
+      ],
+
+      "tags": [
+        "1991",
+        "ECONOMY",
+        "REFORMS"
+      ],
+
+      "regions": [],
+      "mapAction": "none"
+    },
+
+    {
+      "id": "digital_india",
+      "year": "2000s–2010s",
+      "title": "Digital Transformation",
+      "subtitle": "A connected India",
+      "type": "technology",
+      "importance": 4,
+
+      "control": {
+        "name": "Republic of India",
+        "leader": null,
+        "description": "Government, private companies and citizens participate in rapid expansion of telecommunications and digital infrastructure."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "Society goes digital",
+        "description": "Mobile phones, internet access and digital services transform communication, commerce and everyday life."
+      },
+
+      "change": {
+        "title": "Political and economic participation becomes increasingly digital",
+        "description": "Technology creates new ways for citizens, businesses and governments to interact."
+      },
+
+      "figures": [],
+
+      "tags": [
+        "DIGITAL",
+        "TECHNOLOGY",
+        "INTERNET"
+      ],
+
+      "regions": [
+        "modern-india"
+      ],
+
+      "mapAction": "modernize"
+    },
+
+    {
+      "id": "jammu_kashmir",
+      "year": "2019",
+      "title": "Jammu and Kashmir Reorganization",
+      "subtitle": "A major constitutional and territorial change",
+      "type": "law",
+      "importance": 5,
+
+      "control": {
+        "name": "Government of India",
+        "leader": null,
+        "description": "The constitutional status of Jammu and Kashmir is changed and the former state is reorganized into two union territories."
+      },
+
+      "response": {
+        "type": "protest",
+        "title": "Political disagreement",
+        "description": "The change produces significant political debate and differing responses within Jammu and Kashmir and across India."
+      },
+
+      "change": {
+        "title": "The internal administrative map changes",
+        "description": "The former state is reorganized as the Union Territories of Jammu and Kashmir and Ladakh."
+      },
+
+      "figures": [],
+
+      "tags": [
+        "JAMMU AND KASHMIR",
+        "CONSTITUTION",
+        "TERRITORY"
+      ],
+
+      "regions": [],
+      "mapAction": "redraw"
+    },
+
+    {
+      "id": "chandrayaan",
+      "year": "2023",
+      "title": "Chandrayaan-3",
+      "subtitle": "India reaches the lunar south polar region",
+      "type": "space",
+      "importance": 4,
+
+      "control": {
+        "name": "Republic of India",
+        "leader": null,
+        "description": "India's space program successfully lands Chandrayaan-3 near the Moon's south polar region."
+      },
+
+      "response": {
+        "type": "adaptation",
+        "title": "National scientific achievement",
+        "description": "The mission becomes a major symbol of India's scientific and technological capabilities."
+      },
+
+      "change": {
+        "title": "India's technological influence grows",
+        "description": "The achievement strengthens India's position as a major spacefaring nation."
+      },
+
+      "figures": [
+        "ISRO scientists and engineers"
+      ],
+
+      "tags": [
+        "ISRO",
+        "SPACE",
+        "SCIENCE"
+      ],
+
+      "regions": [],
+      "mapAction": "none"
+    },
+
+    {
+      "id": "india_today",
+      "year": "2026",
+      "title": "India Today",
+      "subtitle": "Power in a democratic republic",
+      "type": "politics",
+      "importance": 5,
+
+      "control": {
+        "name": "Republic of India",
+        "leader": "Elected government",
+        "description": "India is a federal democratic republic in which political authority is exercised through constitutional institutions, elected governments and state governments."
+      },
+
+      "response": {
+        "type": "participation",
+        "title": "Citizens shape political power",
+        "description": "Citizens participate through elections, political parties, civil society, protests, media and democratic institutions."
+      },
+
+      "change": {
+        "title": "From empires to constitutional democracy",
+        "description": "Political authority in India has moved through kingdoms, empires, colonial rule and finally a democratic republic."
+      },
+
+      "figures": [],
+
+      "tags": [
+        "MODERN INDIA",
+        "DEMOCRACY",
+        "FEDERALISM"
+      ],
+
+      "regions": [
+        "modern-india"
+      ],
+
+      "mapAction": "modernize"
+    }
+
+  ]
+}
