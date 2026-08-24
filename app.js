@@ -625,4 +625,13 @@ document.addEventListener(
    START
    ========================================================= */
 
-loadTimeline();
+/* =========================================================
+   START
+   ========================================================= */
+
+async function startApp() {
+    await loadMap();
+    await loadTimeline();
+}
+
+startApp();
