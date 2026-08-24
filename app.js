@@ -55,20 +55,25 @@ async function loadTimeline() {
         const response = await fetch("timeline.json");
 
         if (!response.ok) {
-            throw new Error(`Failed to load timeline.json: ${response.status}`);
+            throw new Error(
+                `Failed to load timeline.json: ${response.status}`
+            );
         }
 
         const data = await response.json();
 
-        // The actual timeline array is inside "eras"
         timeline = data.eras;
 
         if (!Array.isArray(timeline)) {
-            throw new Error("timeline.json: 'eras' is not an array");
+            throw new Error(
+                "timeline.json: 'eras' is not an array"
+            );
         }
 
         buildTimelineNavigation();
-        showEra(0);
+
+        currentIndex = 0;
+        renderEvent();
 
     } catch (error) {
         console.error("Failed to load timeline:", error);
@@ -154,6 +159,29 @@ function buildTimelineNavigation() {
 /* =========================================================
    RENDER EVENT
    ========================================================= */
+
+function getEventSymbol(type) {
+
+    const symbols = {
+        civilization: "🏺",
+        ruler: "👑",
+        death: "💀",
+        empire: "🏰",
+        battle: "⚔️",
+        religion: "🔆",
+        revolt: "✊",
+        colonial: "⚓",
+        law: "⚖️",
+        reform: "📜",
+        independence: "🕊️",
+        politics: "🏛️",
+        science: "🧪",
+        technology: "🤖",
+        space: "󠀠󠀠🚀"
+    };
+
+    return symbols[type] || "◈";
+}
 
 function renderEvent() {
 
