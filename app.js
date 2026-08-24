@@ -51,35 +51,29 @@ const elements = {
    ========================================================= */
 
 async function loadTimeline() {
-
     try {
-
         const response = await fetch("timeline.json");
 
         if (!response.ok) {
-            throw new Error("Could not load timeline.json");
+            throw new Error(`Failed to load timeline.json: ${response.status}`);
         }
 
-        timeline = await response.json();
+        const data = await response.json();
 
-        await loadMap();
+        // The actual timeline array is inside "eras"
+        timeline = data.eras;
+
+        if (!Array.isArray(timeline)) {
+            throw new Error("timeline.json: 'eras' is not an array");
+        }
 
         buildTimelineNavigation();
-
-        renderEvent();
+        showEra(0);
 
     } catch (error) {
-
-        console.error(error);
-
-        elements.eraTitle.textContent =
-            "Timeline failed to load";
-
-        elements.eraSummary.textContent =
-            "Check that timeline.json and india.svg are in the correct folder.";
+        console.error("Failed to load timeline:", error);
     }
 }
-
 
 /* =========================================================
    LOAD SVG
