@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Who Controlled India?</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="noise"></div>
+
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-mark">IN</div>
+
+            <div>
+                <div class="brand-title">INDIA</div>
+                <div class="brand-subtitle">A POLITICAL HISTORY</div>
+            </div>
+        </div>
+
+        <div class="progress-wrapper">
+
+            <div class="progress-label">
+                <span id="progressEra">THE BEGINNING</span>
+                <span id="progressNumber">01 / 01</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <!-- HERO / INTRO -->
+
+        <section class="intro-screen" id="introScreen">
+
+            <div class="intro-eyebrow">
+                <span></span>
+                SST PROJECT · POLITICAL HISTORY
+                <span></span>
+            </div>
+
+            <h1>
+                Who Controlled<br>
+                <em>India?</em>
+            </h1>
+
+            <p class="intro-question">
+                And how did people respond?
+            </p>
+
+            <p class="intro-description">
+                From the first cities of the Indus Valley to the
+                world's largest democracy, India's political map
+                has been rewritten again and again.
+            </p>
+
+            <button class="begin-button" id="beginButton">
+                <span>ENTER THE TIMELINE</span>
+                <strong>→</strong>
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             TIMELINE
+        ========================== -->
+
+        <section class="timeline-screen hidden" id="timelineScreen">
+
+            <div class="timeline-grid">
+
+                <!-- LEFT SIDE -->
+
+                <div class="history-panel">
+
+                    <div class="era-meta">
+
+                        <div class="era-period" id="eraPeriod">
+                            2500 BCE
+                        </div>
+
+                        <div class="era-type" id="eraType">
+                            CIVILISATION
+                        </div>
+
+                    </div>
+
+
+                    <h2 id="eraTitle">
+                        The Indus Valley Civilisation
+                    </h2>
+
+
+                    <p class="era-summary" id="eraSummary">
+                        One of the world's earliest urban civilisations
+                        developed across the northwestern Indian
+                        subcontinent.
+                    </p>
+
+
+                    <!-- CONTROLLER -->
+
+                    <div class="timeline-controller">
+
+                        <button
+                            class="nav-button previous"
+                            id="previousButton"
+                            aria-label="Previous era"
+                        >
+                            ←
+                        </button>
+
+                        <div class="timeline-dots" id="timelineDots"></div>
+
+                        <button
+                            class="nav-button next"
+                            id="nextButton"
+                            aria-label="Next era"
+                        >
+                            →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CENTER -->
+
+                <div class="event-panel">
+
+                    <div class="event-header">
+
+                        <div
+                            class="event-symbol"
+                            id="eventSymbol"
+                        >
+                            ◈
+                        </div>
+
+                        <div>
+
+                            <div class="event-category" id="eventCategory">
+                                POLITICAL CHANGE
+                            </div>
+
+                            <h3 id="eventTitle">
+                                Urban civilisation emerges
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-content">
+
+                        <div class="event-block">
+
+                            <div class="event-label">
+                                WHO CONTROLLED IT?
+                            </div>
+
+                            <p id="controllerText"></p>
+
+                        </div>
+
+
+                        <div class="event-block">
+
+                            <div class="event-label">
+                                WHAT CHANGED?
+                            </div>
+
+                            <p id="changeText"></p>
+
+                        </div>
+
+
+                        <div class="event-block response-block">
+
+                            <div class="event-label">
+                                HOW DID PEOPLE RESPOND?
+                            </div>
+
+                            <p id="responseText"></p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-footer">
+
+                        <span id="eventDate">
+                            c. 2500–1900 BCE
+                        </span>
+
+                        <span class="footer-divider"></span>
+
+                        <span id="eventLocation">
+                            Northwestern subcontinent
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+
+                <div class="map-panel">
+
+                    <div class="map-header">
+
+                        <div>
+                            <span class="map-eyebrow">
+                                TERRITORIAL CHANGE
+                            </span>
+
+                            <h3>Where did power lie?</h3>
+                        </div>
+
+                        <div class="map-legend">
+                            <span class="legend-dot"></span>
+                            <span id="mapLegendText">
+                                REGION AFFECTED
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="map-container">
+
+                        <div class="map-year" id="mapYear">
+                            2500 BCE
+                        </div>
+
+                        <div
+                            class="india-map"
+                            id="indiaMap"
+                        >
+                            <!--
+                                Your SVG gets inserted here by JS.
+                                Put india.svg in the same folder.
+                            -->
+                        </div>
+
+                        <div class="map-caption" id="mapCaption">
+                            Approximate modern geographic reference.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 MINI TIMELINE
+            ========================== -->
+
+            <div class="bottom-timeline">
+
+                <div class="timeline-line"></div>
+
+                <div id="timelineMarkers"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             END SCREEN
+        ========================== -->
+
+        <section
+            class="end-screen hidden"
+            id="endScreen"
+        >
+
+            <div class="end-eyebrow">
+                THE TIMELINE ENDS
+            </div>
+
+            <h2>
+                India was never<br>
+                <em>politically static.</em>
+            </h2>
+
+            <p>
+                Kingdoms rose. Empires expanded. People resisted.
+                Governments collapsed. New political ideas emerged.
+                And eventually, sovereignty became the responsibility
+                of the people themselves.
+            </p>
+
+            <div class="end-statements">
+
+                <div>
+                    <strong>2500+</strong>
+                    <span>YEARS OF POLITICAL CHANGE</span>
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    <span>RESPONSES TO POWER</span>
+                </div>
+
+                <div>
+                    <strong>1</strong>
+                    <span>REPUBLIC</span>
+                </div>
+
+            </div>
+
+            <button
+                class="restart-button"
+                id="restartButton"
+            >
+                ↻ RESTART TIMELINE
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         JS
+    ========================== -->
+
+    <script src="app.js"></script>
+
+</body>
+</html>
