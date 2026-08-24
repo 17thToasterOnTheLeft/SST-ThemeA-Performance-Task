@@ -161,49 +161,91 @@ function renderEvent() {
 
     const era = timeline[currentIndex];
 
-    elements.eraPeriod.textContent = era.period;
-    elements.eraType.textContent = era.type;
+    /* =========================
+       BASIC ERA INFORMATION
+       ========================= */
 
-    elements.eraTitle.textContent = era.title;
-    elements.eraSummary.textContent = era.summary;
+    elements.eraPeriod.textContent =
+        era.year;
+
+    elements.eraType.textContent =
+        era.type?.toUpperCase() || "POLITICAL CHANGE";
+
+    elements.eraTitle.textContent =
+        era.title;
+
+    elements.eraSummary.textContent =
+        era.subtitle;
+
+
+    /* =========================
+       EVENT INFORMATION
+       ========================= */
 
     elements.eventSymbol.textContent =
-        era.symbol || "◈";
+        getEventSymbol(era.type);
 
     elements.eventCategory.textContent =
-        era.eventType || "POLITICAL CHANGE";
+        era.type?.toUpperCase() || "POLITICAL CHANGE";
 
     elements.eventTitle.textContent =
-        era.eventTitle;
+        era.change?.title || era.title;
+
+
+    /* =========================
+       CONTROL
+       ========================= */
 
     elements.controllerText.textContent =
-        era.controlledBy;
+        era.control?.description ||
+        era.control?.name ||
+        "Political authority is unclear.";
+
+
+    /* =========================
+       CHANGE
+       ========================= */
 
     elements.changeText.textContent =
-        era.change;
+        era.change?.description ||
+        "The political situation changes.";
+
+
+    /* =========================
+       RESPONSE
+       ========================= */
 
     elements.responseText.textContent =
-        era.response;
+        era.response?.description ||
+        "People respond to the changing political situation.";
+
+
+    /* =========================
+       DATE / LOCATION
+       ========================= */
 
     elements.eventDate.textContent =
-        era.date || era.period;
+        era.year;
 
     elements.eventLocation.textContent =
-        era.location || "Indian subcontinent";
+        getEraLocation(era);
+
+
+    /* =========================
+       MAP
+       ========================= */
 
     elements.mapYear.textContent =
-        era.period;
+        era.year;
 
     elements.mapCaption.textContent =
         era.mapCaption ||
-        "Highlighted regions are approximate modern geographic references.";
+        "Highlighted regions show the approximate modern-day areas affected by this political change.";
+
 
     updateProgress();
-
     updateNavigation();
-
     updateMap();
-
     updateMarkers();
 }
 
