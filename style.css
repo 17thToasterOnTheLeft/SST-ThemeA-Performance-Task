@@ -871,15 +871,11 @@ body {
 /* MAP */
 
 .map-container {
-
     position: relative;
-
     flex: 1;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     overflow: hidden;
@@ -912,25 +908,26 @@ body {
     pointer-events: none;
 }
 
-.india-map {
-
-    width: 75%;
-    height: 80%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.india-map svg {
-
+.indiaMap {
     width: 100%;
     height: 100%;
+    min-height: 500px;
 
-    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
 }
 
+.indiaMap svg {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+    display: block;
+}
 
 /* SVG DEFAULT */
 
