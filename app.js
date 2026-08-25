@@ -39,7 +39,6 @@ const elements = {
 
     mapYear: document.getElementById("mapYear"),
     mapCaption: document.getElementById("mapCaption"),
-    indiaMap: document.getElementById("indiaMap"),
 
     timelineDots: document.getElementById("timelineDots"),
     timelineMarkers: document.getElementById("timelineMarkers")
@@ -238,7 +237,6 @@ function renderEvent() {
 
     updateProgress();
     updateNavigation();
-    updateMap();
     updateMarkers();
 }
 
@@ -285,30 +283,6 @@ function updateNavigation() {
 }
 
 
-/* =========================================================
-   MAP
-   ========================================================= */
-
-function updateMap() {
-
-    const svg = elements.indiaMap.querySelector("svg");
-
-    if (!svg) return;
-
-    /*
-        Reset everything first.
-    */
-
-    svg.querySelectorAll(
-        ".highlighted, .secondary"
-    ).forEach(region => {
-
-        region.classList.remove("highlighted");
-        region.classList.remove("secondary");
-
-    });
-
-
     const era = timeline[currentIndex];
 
 
@@ -328,66 +302,6 @@ function updateMap() {
 
         });
     }
-
-
-    /*
-        SECONDARY AREAS
-    */
-
-    if (era.map?.secondary) {
-
-        era.map.secondary.forEach(id => {
-
-            const region = findRegion(svg, id);
-
-            if (region) {
-                region.classList.add("secondary");
-            }
-
-        });
-    }
-}
-
-
-/* =========================================================
-   FIND SVG REGION
-   ========================================================= */
-
-function findRegion(svg, id) {
-
-    /*
-        First try exact ID.
-    */
-
-    let region = svg.querySelector(`#${CSS.escape(id)}`);
-
-    if (region) return region;
-
-
-    /*
-        Then try case-insensitive ID matching.
-    */
-
-    const all = svg.querySelectorAll("[id]");
-
-    const target =
-        id.toLowerCase().replace(/[\s_-]/g, "");
-
-    for (const element of all) {
-
-        const elementId =
-            element.id
-                .toLowerCase()
-                .replace(/[\s_-]/g, "");
-
-        if (elementId === target) {
-            return element;
-        }
-    }
-
-
-    return null;
-}
 
 
 /* =========================================================
