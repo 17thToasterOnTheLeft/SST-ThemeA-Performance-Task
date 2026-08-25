@@ -51,6 +51,7 @@ const elements = {
 
 async function loadTimeline() {
     try {
+
         const response = await fetch("timeline.json");
 
         if (!response.ok) {
@@ -75,9 +76,12 @@ async function loadTimeline() {
         renderEvent();
 
     } catch (error) {
+
         console.error("Failed to load timeline:", error);
+
     }
 }
+
 
 /* =========================================================
    BUILD NAVIGATION
@@ -85,48 +89,63 @@ async function loadTimeline() {
 
 function buildTimelineNavigation() {
 
-    elements.timelineDots.innerHTML = "";
-    elements.timelineMarkers.innerHTML = "";
+    if (elements.timelineDots) {
+        elements.timelineDots.innerHTML = "";
+    }
+
+    if (elements.timelineMarkers) {
+        elements.timelineMarkers.innerHTML = "";
+    }
 
     timeline.forEach((era, index) => {
 
         /* DOT */
 
-        const dot = document.createElement("div");
+        if (elements.timelineDots) {
 
-        dot.className = "timeline-dot";
+            const dot = document.createElement("div");
 
-        dot.addEventListener("click", () => {
-            goTo(index);
-        });
+            dot.className = "timeline-dot";
 
-        elements.timelineDots.appendChild(dot);
+            dot.addEventListener("click", () => {
+                goTo(index);
+            });
+
+            elements.timelineDots.appendChild(dot);
+
+        }
 
 
         /* MARKER */
 
-        const marker = document.createElement("div");
+        if (elements.timelineMarkers) {
 
-        marker.className = "timeline-marker";
+            const marker = document.createElement("div");
 
-        marker.dataset.year = era.period;
+            marker.className = "timeline-marker";
 
-        marker.addEventListener("click", () => {
-            goTo(index);
-        });
+            marker.dataset.year = era.period;
 
-        elements.timelineMarkers.appendChild(marker);
+            marker.addEventListener("click", () => {
+                goTo(index);
+            });
+
+            elements.timelineMarkers.appendChild(marker);
+
+        }
+
     });
 }
 
 
 /* =========================================================
-   RENDER EVENT
+   EVENT SYMBOL
    ========================================================= */
 
 function getEventSymbol(type) {
 
     const symbols = {
+
         civilization: "🏺",
         ruler: "👑",
         death: "💀",
@@ -141,11 +160,17 @@ function getEventSymbol(type) {
         politics: "🏛️",
         science: "🧪",
         technology: "🤖",
-        space: "󠀠󠀠🚀"
+        space: "🚀"
+
     };
 
     return symbols[type] || "◈";
 }
+
+
+/* =========================================================
+   RENDER EVENT
+   ========================================================= */
 
 function renderEvent() {
 
@@ -153,91 +178,138 @@ function renderEvent() {
 
     const era = timeline[currentIndex];
 
+    /*
+       Safely update an element.
+
+       This prevents:
+       Cannot set properties of null (setting 'textContent')
+
+       if an element was removed from the HTML.
+    */
+
+    const setText = (element, value) => {
+
+        if (element) {
+            element.textContent = value ?? "";
+        }
+
+    };
+
+
     /* =========================
        BASIC ERA INFORMATION
        ========================= */
 
-    elements.eraPeriod.textContent =
-        era.year;
+    setText(
+        elements.eraPeriod,
+        era.year
+    );
 
-    elements.eraType.textContent =
-        era.type?.toUpperCase() || "POLITICAL CHANGE";
+    setText(
+        elements.eraType,
+        era.type?.toUpperCase() || "POLITICAL CHANGE"
+    );
 
-    elements.eraTitle.textContent =
-        era.title;
+    setText(
+        elements.eraTitle,
+        era.title
+    );
 
-    elements.eraSummary.textContent =
-        era.subtitle;
+    setText(
+        elements.eraSummary,
+        era.subtitle
+    );
 
 
     /* =========================
        EVENT INFORMATION
        ========================= */
 
-    elements.eventSymbol.textContent =
-        getEventSymbol(era.type);
+    setText(
+        elements.eventSymbol,
+        getEventSymbol(era.type)
+    );
 
-    elements.eventCategory.textContent =
-        era.type?.toUpperCase() || "POLITICAL CHANGE";
+    setText(
+        elements.eventCategory,
+        era.type?.toUpperCase() || "POLITICAL CHANGE"
+    );
 
-    elements.eventTitle.textContent =
-        era.change?.title || era.title;
+    setText(
+        elements.eventTitle,
+        era.change?.title || era.title
+    );
 
 
     /* =========================
        CONTROL
        ========================= */
 
-    elements.controllerText.textContent =
+    setText(
+        elements.controllerText,
         era.control?.description ||
         era.control?.name ||
-        "Political authority is unclear.";
+        "Political authority is unclear."
+    );
 
 
     /* =========================
        CHANGE
        ========================= */
 
-    elements.changeText.textContent =
+    setText(
+        elements.changeText,
         era.change?.description ||
-        "The political situation changes.";
+        "The political situation changes."
+    );
 
 
     /* =========================
        RESPONSE
        ========================= */
 
-    elements.responseText.textContent =
+    setText(
+        elements.responseText,
         era.response?.description ||
-        "People respond to the changing political situation.";
+        "People respond to the changing political situation."
+    );
 
 
     /* =========================
        DATE / LOCATION
        ========================= */
 
-    elements.eventDate.textContent =
-        era.year;
+    setText(
+        elements.eventDate,
+        era.year
+    );
 
-    elements.eventLocation.textContent =
-        elements.eventLocation.textContent =     era.location || "Indian subcontinent";
+    setText(
+        elements.eventLocation,
+        era.location || "Indian subcontinent"
+    );
 
 
     /* =========================
        MAP
        ========================= */
 
-    elements.mapYear.textContent =
-        era.year;
+    setText(
+        elements.mapYear,
+        era.year
+    );
 
-    elements.mapCaption.textContent =
+    setText(
+        elements.mapCaption,
         era.mapCaption ||
-        "Highlighted regions show the approximate modern-day areas affected by this political change.";
+        "Highlighted regions show the approximate modern-day areas affected by this political change."
+    );
 
 
     updateProgress();
     updateNavigation();
     updateMarkers();
+
 }
 
 
@@ -249,23 +321,42 @@ function updateProgress() {
 
     const total = timeline.length;
 
+    if (!total) return;
+
     const number =
         String(currentIndex + 1).padStart(2, "0");
 
     const totalNumber =
         String(total).padStart(2, "0");
 
-    elements.progressNumber.textContent =
-        `${number} / ${totalNumber}`;
 
-    elements.progressEra.textContent =
-        timeline[currentIndex].period;
+    if (elements.progressNumber) {
+
+        elements.progressNumber.textContent =
+            `${number} / ${totalNumber}`;
+
+    }
+
+
+    if (elements.progressEra) {
+
+        elements.progressEra.textContent =
+            timeline[currentIndex].period;
+
+    }
+
 
     const percentage =
         ((currentIndex + 1) / total) * 100;
 
-    elements.progressBar.style.width =
-        `${percentage}%`;
+
+    if (elements.progressBar) {
+
+        elements.progressBar.style.width =
+            `${percentage}%`;
+
+    }
+
 }
 
 
@@ -275,33 +366,22 @@ function updateProgress() {
 
 function updateNavigation() {
 
-    elements.previousButton.disabled =
-        currentIndex === 0;
+    if (elements.previousButton) {
 
-    elements.nextButton.disabled =
-        currentIndex === timeline.length - 1;
-}
+        elements.previousButton.disabled =
+            currentIndex === 0;
 
-
-    const era = timeline[currentIndex];
-
-
-    /*
-        MAIN AREAS
-    */
-
-    if (era.map?.highlight) {
-
-        era.map.highlight.forEach(id => {
-
-            const region = findRegion(svg, id);
-
-            if (region) {
-                region.classList.add("highlighted");
-            }
-
-        });
     }
+
+
+    if (elements.nextButton) {
+
+        elements.nextButton.disabled =
+            currentIndex === timeline.length - 1;
+
+    }
+
+}
 
 
 /* =========================================================
@@ -332,6 +412,7 @@ function updateMarkers() {
             );
 
         });
+
 }
 
 
@@ -351,6 +432,7 @@ function goTo(index) {
     currentIndex = index;
 
     animateEvent();
+
 }
 
 
@@ -368,7 +450,10 @@ function animateEvent() {
 
     ];
 
+
     panels.forEach(panel => {
+
+        if (!panel) return;
 
         panel.classList.remove("fade-in");
 
@@ -381,7 +466,10 @@ function animateEvent() {
 
         renderEvent();
 
+
         panels.forEach(panel => {
+
+            if (!panel) return;
 
             panel.classList.remove("fade-out");
 
@@ -392,6 +480,7 @@ function animateEvent() {
         });
 
     }, 250);
+
 }
 
 
@@ -399,68 +488,96 @@ function animateEvent() {
    BUTTONS
    ========================================================= */
 
-elements.nextButton.addEventListener(
-    "click",
-    () => {
+if (elements.nextButton) {
 
-        if (currentIndex < timeline.length - 1) {
-            goTo(currentIndex + 1);
+    elements.nextButton.addEventListener(
+        "click",
+        () => {
+
+            if (currentIndex < timeline.length - 1) {
+
+                goTo(currentIndex + 1);
+
+            }
+
         }
+    );
 
-    }
-);
+}
 
 
-elements.previousButton.addEventListener(
-    "click",
-    () => {
+if (elements.previousButton) {
 
-        if (currentIndex > 0) {
-            goTo(currentIndex - 1);
+    elements.previousButton.addEventListener(
+        "click",
+        () => {
+
+            if (currentIndex > 0) {
+
+                goTo(currentIndex - 1);
+
+            }
+
         }
+    );
 
-    }
-);
+}
 
 
 /* =========================================================
    INTRO
    ========================================================= */
 
-elements.beginButton.addEventListener(
-    "click",
-    () => {
+if (elements.beginButton) {
 
-        elements.introScreen.classList.add("hidden");
+    elements.beginButton.addEventListener(
+        "click",
+        () => {
 
-        elements.timelineScreen.classList.remove("hidden");
+            if (elements.introScreen) {
+                elements.introScreen.classList.add("hidden");
+            }
 
-        currentIndex = 0;
+            if (elements.timelineScreen) {
+                elements.timelineScreen.classList.remove("hidden");
+            }
 
-        renderEvent();
+            currentIndex = 0;
 
-    }
-);
+            renderEvent();
+
+        }
+    );
+
+}
 
 
 /* =========================================================
    RESTART
    ========================================================= */
 
-elements.restartButton.addEventListener(
-    "click",
-    () => {
+if (elements.restartButton) {
 
-        elements.endScreen.classList.add("hidden");
+    elements.restartButton.addEventListener(
+        "click",
+        () => {
 
-        elements.timelineScreen.classList.remove("hidden");
+            if (elements.endScreen) {
+                elements.endScreen.classList.add("hidden");
+            }
 
-        currentIndex = 0;
+            if (elements.timelineScreen) {
+                elements.timelineScreen.classList.remove("hidden");
+            }
 
-        renderEvent();
+            currentIndex = 0;
 
-    }
-);
+            renderEvent();
+
+        }
+    );
+
+}
 
 
 /* =========================================================
@@ -482,7 +599,9 @@ document.addEventListener(
                 currentIndex <
                 timeline.length - 1
             ) {
+
                 goTo(currentIndex + 1);
+
             }
 
         }
@@ -491,7 +610,9 @@ document.addEventListener(
         if (event.key === "ArrowLeft") {
 
             if (currentIndex > 0) {
+
                 goTo(currentIndex - 1);
+
             }
 
         }
@@ -504,12 +625,10 @@ document.addEventListener(
    START
    ========================================================= */
 
-/* =========================================================
-   START
-   ========================================================= */
-
 async function startApp() {
+
     await loadTimeline();
+
 }
 
 startApp();
