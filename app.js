@@ -81,41 +81,6 @@ async function loadTimeline() {
 }
 
 /* =========================================================
-   LOAD SVG
-   ========================================================= */
-
-async function loadMap() {
-
-    try {
-
-        const response = await fetch("india.svg");
-
-        if (!response.ok) {
-            throw new Error("Could not load india.svg");
-        }
-
-        const svgText = await response.text();
-
-        elements.indiaMap.innerHTML = svgText;
-
-    } catch (error) {
-
-        console.error(error);
-
-        elements.indiaMap.innerHTML = `
-            <div style="
-                color:#777;
-                text-align:center;
-                font-size:12px;
-            ">
-                INDIA MAP COULD NOT BE LOADED
-            </div>
-        `;
-    }
-}
-
-
-/* =========================================================
    BUILD NAVIGATION
    ========================================================= */
 
@@ -630,7 +595,6 @@ document.addEventListener(
    ========================================================= */
 
 async function startApp() {
-    await loadMap();
     await loadTimeline();
 }
 
