@@ -50,14 +50,17 @@ const elements = {
    ========================================================= */
 
 async function loadTimeline() {
+
     try {
 
         const response = await fetch("timeline.json");
 
         if (!response.ok) {
+
             throw new Error(
                 `Failed to load timeline.json: ${response.status}`
             );
+
         }
 
         const data = await response.json();
@@ -65,14 +68,17 @@ async function loadTimeline() {
         timeline = data.eras;
 
         if (!Array.isArray(timeline)) {
+
             throw new Error(
                 "timeline.json: 'eras' is not an array"
             );
+
         }
 
         buildTimelineNavigation();
 
         currentIndex = 0;
+
         renderEvent();
 
     } catch (error) {
@@ -80,6 +86,7 @@ async function loadTimeline() {
         console.error("Failed to load timeline:", error);
 
     }
+
 }
 
 
@@ -97,9 +104,13 @@ function buildTimelineNavigation() {
         elements.timelineMarkers.innerHTML = "";
     }
 
+
     timeline.forEach((era, index) => {
 
-        /* DOT */
+
+        /* =========================
+           DOT
+           ========================= */
 
         if (elements.timelineDots) {
 
@@ -108,7 +119,9 @@ function buildTimelineNavigation() {
             dot.className = "timeline-dot";
 
             dot.addEventListener("click", () => {
+
                 goTo(index);
+
             });
 
             elements.timelineDots.appendChild(dot);
@@ -116,7 +129,9 @@ function buildTimelineNavigation() {
         }
 
 
-        /* MARKER */
+        /* =========================
+           MARKER
+           ========================= */
 
         if (elements.timelineMarkers) {
 
@@ -124,10 +139,12 @@ function buildTimelineNavigation() {
 
             marker.className = "timeline-marker";
 
-            marker.dataset.year = era.period;
+            marker.dataset.year = era.period || era.year || "";
 
             marker.addEventListener("click", () => {
+
                 goTo(index);
+
             });
 
             elements.timelineMarkers.appendChild(marker);
@@ -135,6 +152,7 @@ function buildTimelineNavigation() {
         }
 
     });
+
 }
 
 
@@ -165,6 +183,22 @@ function getEventSymbol(type) {
     };
 
     return symbols[type] || "◈";
+
+}
+
+
+/* =========================================================
+   SAFE TEXT UPDATE
+   ========================================================= */
+
+function setText(element, value) {
+
+    if (!element) {
+        return;
+    }
+
+    element.textContent = value ?? "";
+
 }
 
 
@@ -174,26 +208,16 @@ function getEventSymbol(type) {
 
 function renderEvent() {
 
-    if (!timeline.length) return;
+    if (!timeline.length) {
+        return;
+    }
+
 
     const era = timeline[currentIndex];
 
-    /*
-       Safely update an element.
-
-       This prevents:
-       Cannot set properties of null (setting 'textContent')
-
-       if an element was removed from the HTML.
-    */
-
-    const setText = (element, value) => {
-
-        if (element) {
-            element.textContent = value ?? "";
-        }
-
-    };
+    if (!era) {
+        return;
+    }
 
 
     /* =========================
@@ -205,15 +229,19 @@ function renderEvent() {
         era.year
     );
 
+
     setText(
         elements.eraType,
-        era.type?.toUpperCase() || "POLITICAL CHANGE"
+        era.type?.toUpperCase() ||
+        "POLITICAL CHANGE"
     );
+
 
     setText(
         elements.eraTitle,
         era.title
     );
+
 
     setText(
         elements.eraSummary,
@@ -230,14 +258,18 @@ function renderEvent() {
         getEventSymbol(era.type)
     );
 
+
     setText(
         elements.eventCategory,
-        era.type?.toUpperCase() || "POLITICAL CHANGE"
+        era.type?.toUpperCase() ||
+        "POLITICAL CHANGE"
     );
+
 
     setText(
         elements.eventTitle,
-        era.change?.title || era.title
+        era.change?.title ||
+        era.title
     );
 
 
@@ -284,9 +316,11 @@ function renderEvent() {
         era.year
     );
 
+
     setText(
         elements.eventLocation,
-        era.location || "Indian subcontinent"
+        era.location ||
+        "Indian subcontinent"
     );
 
 
@@ -299,6 +333,7 @@ function renderEvent() {
         era.year
     );
 
+
     setText(
         elements.mapCaption,
         era.mapCaption ||
@@ -307,7 +342,9 @@ function renderEvent() {
 
 
     updateProgress();
+
     updateNavigation();
+
     updateMarkers();
 
 }
@@ -321,29 +358,32 @@ function updateProgress() {
 
     const total = timeline.length;
 
-    if (!total) return;
+    if (!total) {
+        return;
+    }
+
 
     const number =
-        String(currentIndex + 1).padStart(2, "0");
+        String(currentIndex + 1)
+            .padStart(2, "0");
+
 
     const totalNumber =
-        String(total).padStart(2, "0");
+        String(total)
+            .padStart(2, "0");
 
 
-    if (elements.progressNumber) {
-
-        elements.progressNumber.textContent =
-            `${number} / ${totalNumber}`;
-
-    }
+    setText(
+        elements.progressNumber,
+        `${number} / ${totalNumber}`
+    );
 
 
-    if (elements.progressEra) {
-
-        elements.progressEra.textContent =
-            timeline[currentIndex].period;
-
-    }
+    setText(
+        elements.progressEra,
+        timeline[currentIndex].period ||
+        timeline[currentIndex].year
+    );
 
 
     const percentage =
@@ -426,8 +466,11 @@ function goTo(index) {
         index < 0 ||
         index >= timeline.length
     ) {
+
         return;
+
     }
+
 
     currentIndex = index;
 
@@ -453,7 +496,9 @@ function animateEvent() {
 
     panels.forEach(panel => {
 
-        if (!panel) return;
+        if (!panel) {
+            return;
+        }
 
         panel.classList.remove("fade-in");
 
@@ -469,7 +514,9 @@ function animateEvent() {
 
         panels.forEach(panel => {
 
-            if (!panel) return;
+            if (!panel) {
+                return;
+            }
 
             panel.classList.remove("fade-out");
 
@@ -494,7 +541,10 @@ if (elements.nextButton) {
         "click",
         () => {
 
-            if (currentIndex < timeline.length - 1) {
+            if (
+                currentIndex <
+                timeline.length - 1
+            ) {
 
                 goTo(currentIndex + 1);
 
@@ -535,12 +585,22 @@ if (elements.beginButton) {
         () => {
 
             if (elements.introScreen) {
-                elements.introScreen.classList.add("hidden");
+
+                elements.introScreen.classList.add(
+                    "hidden"
+                );
+
             }
 
+
             if (elements.timelineScreen) {
-                elements.timelineScreen.classList.remove("hidden");
+
+                elements.timelineScreen.classList.remove(
+                    "hidden"
+                );
+
             }
+
 
             currentIndex = 0;
 
@@ -563,12 +623,22 @@ if (elements.restartButton) {
         () => {
 
             if (elements.endScreen) {
-                elements.endScreen.classList.add("hidden");
+
+                elements.endScreen.classList.add(
+                    "hidden"
+                );
+
             }
 
+
             if (elements.timelineScreen) {
-                elements.timelineScreen.classList.remove("hidden");
+
+                elements.timelineScreen.classList.remove(
+                    "hidden"
+                );
+
             }
+
 
             currentIndex = 0;
 
@@ -588,12 +658,18 @@ document.addEventListener(
     "keydown",
     event => {
 
+
+        /* =========================
+           NEXT
+           ========================= */
+
         if (
             event.key === "ArrowRight" ||
             event.key === " "
         ) {
 
             event.preventDefault();
+
 
             if (
                 currentIndex <
@@ -606,6 +682,10 @@ document.addEventListener(
 
         }
 
+
+        /* =========================
+           PREVIOUS
+           ========================= */
 
         if (event.key === "ArrowLeft") {
 
@@ -630,5 +710,6 @@ async function startApp() {
     await loadTimeline();
 
 }
+
 
 startApp();
